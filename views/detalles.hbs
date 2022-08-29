@@ -1,0 +1,29 @@
+<div class="productoDetalle"><tr>{{#each titulosYFoto}}
+                <h3>{{producto.titulo}} </h3>
+                <div class="imgDeDetail"><img src="" alt="" />{{{imagen}}}</div>
+                <div class="datosDetail">
+                    <div class="pDeDetail">
+                        <h6>Sinopsis: </h6>
+                        <p> {{sinopsis}}</p>
+                    </div>
+                    <div class="pDeDetailInferior">
+                        <p class="pDeDetailP">Etiquetas:{{producto.etiquetas}}</p>
+                        <p class="pDeDetailP">Estreno:{{producto.estreno}}</p>
+                        <p class="pDeDetailP">Disponible en:  <a href={{producto.plataformas}}>{{producto.plataformas}}</a></p>
+                        <form class="formDetail">
+                            <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5" />{{producto.estrellas}}
+                                <label class="lableDeDitail" for="radio1">Cantidad de estrellas ★: </label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="video"><h3>Trailer</h3><iframe width="560" height="315" src="{{producto.trailer}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="text-align: center ;">{{producto.trailer}}</iframe>
+                        <h3>Imagenes</h3>
+                        <div class="imgDeImgDetail">
+                            <div class="card1"><img class="imgDeDetail" src={{{imagen}}} alt="" />{{{imagen}}}</div>
+                            {{/each}}
+              </tr>
+                   
+                    </div>
+                </div>
+            </div>

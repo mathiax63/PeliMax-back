@@ -1,0 +1,76 @@
+ <h1>editar pelicula</h1>
+ <form action="/admin/admin/editar" method="POST" enctype="multipart/form-data" style="margin: 0px 30px ;">
+                                  <input type="hidden" value="{{producto.id}}"name="id">
+
+                    <section class="categorias">
+                        
+                        <article class="Datos-producto">
+                           
+                            <div class="nombre">
+                                <label for="titulo">Titulo</label>
+                                <input type="text" name="titulo" id="nombreP" value="{{producto.titulo}}">
+                                
+                            </div>
+                            <div class="description">
+                                <label for="sinopsis">Sinopsis</label>
+                                <input type="text" name="sinopsis"  id="marcaP" value="{{producto.sinopsis}}">
+                                
+                            </div>
+                              <div class="description">
+                                <label for="trailer">Trailer</label>
+                                <input type="text" name="trailer"  id="marcaP" value="{{producto.trailer}}" >
+                                
+                            </div>
+        
+                            <div class="precio">
+                                <label for="estrellas">Estrellas</label>
+                                <input type="number" name="estrellas" value ="{{producto.estrellas}}" >
+                                
+                            </div>
+                        </article>
+                        
+                        
+                       <article><label for="plataformas">plataformas para ver</label>
+                            
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="hbo_max" {{#if producto.plataformas.hbo_max}}checked{{/if}}>Hbo Max</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="disney_plus" {{#if producto.plataformas.disney_plus}}checked{{/if}}>Disney Plus</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="amazon_prime" {{#if producto.plataformas.amazon_prime}}checked{{/if}}>Amazon Prime</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="netflix" {{#if producto.plataformas.netflix}}checked{{/if}}>Netflix</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="cuevana" {{#if producto.plataformas.cuevana}}checked{{/if}}>Cuevana</div>
+                        </article>
+                         <article><label for="categorias">categorias</label>
+                            
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="aventura" {{#if producto.etiquetas.aventura}}checked{{/if}}>Aventura</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="accion" {{#if producto.etiquetas.accion}}checked{{/if}}>Accion</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="misterio" {{#if producto.etiquetas.misterio}}checked{{/if}}>Misterio</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="terror" {{#if producto.etiquetas.terror}}checked{{/if}}>Terror</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="suspenso" {{#if producto.etiquetas.suspenso}}checked{{/if}}>Suspenso</div>
+                        
+                        </article>
+
+            
+                    </section>
+                    
+                   
+                        <section>
+                            <article class="carga-fotos">
+                                <label for="">Fecha de estreno</label><input name="estreno" type="date" value="{{producto.estreno}}">
+                                <label for="imagenes">Subir imágenes</label>
+                                <input id="imagenP" type="file" name="imagenes" accept="image/*" value="{{producto.imagenes}}">
+                                <div class="checkbox"><input class="checkbox" type="checkbox" name="img_delete" value="1">Desea eliminar la imagen vieja?
+                                <input type="hidden" name="img_original" value="{{producto.imagenes}}"></div>
+                            </article>
+                        </section>
+                        <article class="boton-carga-producto">
+                            <label for="producto-nuevo" method=""></label>
+                            <button class="boton-guardar-producto" type="submit">actualizar pelicula</button>
+                        </article>
+                        <article class="boton-carga-producto">
+                            <label for="volverAtrás" method=""></label>
+                            <a href='/admin/admin' class="botonVistaAdministrador">Volver a la vista de administrador</a>
+                        </article>
+                    </section>
+                </form>
+                {{#if error}}
+                <p>{{message}}</p>
+                {{/if}}

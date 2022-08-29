@@ -1,0 +1,69 @@
+ <h1>Agregar pelicula</h1>
+ <form action="/admin/admin/agregar" method="POST" style="margin: 0px 30px ;" enctype="multipart/form-data">
+                    <section class="categorias">
+                        <article class="Datos-producto">
+                            <div class="nombre">
+                                <label for="titulo">Titulo</label>
+                                <input type="text" name="titulo" id="nombreP" >
+                                
+                            </div> 
+                            <div class="description">
+                                <label for="sinopsis">Sinopsis</label>
+                                <input type="text" name="sinopsis"  id="marcaP" >
+                                
+                            </div>
+                              <div class="description">
+                                <label for="trailer">Trailer</label>
+                                <input type="text" name="trailer"  id="marcaP" >
+                                
+                            </div>
+        
+                            <div class="precio">
+                                <label for="estrellas">Estrellas</label>
+                                <input type="number" name="estrellas"  >
+                                
+                            </div>
+                        </article>
+                        
+                        
+                        <article><label for="plataformas">plataformas para ver</label>
+                            
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="hbo_max">Hbo Max</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="disney_plus">Disney Plus</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="amazon_prime">Amazon Prime</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="netflix">Netflix</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="Plataformasparaver" value="cuevana">Cuevana</div>
+                        </article>
+                         <article><label for="categorias">categorias</label>
+                            
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="aventura">Aventura</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="accion">Accion</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="misterio">Misterio</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="terror">Terror</div>
+                        <div class="checkbox"><input class="checkbox" type="checkbox" name="etiquetas" value="suspenso">Suspenso</div>
+                        </article>
+
+            
+                    </section>
+                    
+                   
+                        <section>
+                            <article class="carga-fotos">
+                                <label for="">Fecha de estreno</label><input name="estreno" type="date">
+                                <label for="imagenes">Subir imágenes</label>
+                                <input id="imagenP" type="file" name="imagenes" accept="image/*" >
+                            </article>
+                        </section>
+                        <article class="boton-carga-producto">
+                            <label for="producto-nuevo" method=""></label>
+                            <button class="boton-guardar-producto" type="submit">Cargar pelicula</button>
+                        </article>
+                        <article class="boton-carga-producto">
+                            <label for="volverAtrás" method=""></label>
+                            <a href='/admin/admin' class="botonVistaAdministrador">Volver a la vista de administrador</a>
+                        </article>
+                    </section>
+                </form>
+                {{#if error}}
+                <p>{{message}}</p>
+                {{/if}}

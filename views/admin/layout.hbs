@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    
+     
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/css/stylee.css"/>
+        <title>Detalles</title>
+      
+  </head>
+  
+  
+  <body><header>
+  
+        <div class="headerIndex">
+           
+        <h1>PeliMax</h1>
+      
+                </div>
+                <nav>
+            <div className="holder">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/paginasParaVer">Plataformas para ver sus peliculas</a></li>
+                    <li><a href="/todasLasPeliculas">Todos los productos</a></li>
+                    <li><a href="/admin">Soy administrador</a></li>
+                </ul>
+            </div>
+        </nav>
+                </header>
+
+
+    {{{body}}}
+
+
+
+    <div>
+      <footer>
+    <div class="DivFooter">
+      <div class="contact">
+    <h3>Quienes somos</h3>
+    <p>Somos una pagina que recopila peliculas para que pueda obtener mas informacion de las mismas tanto en critica como en donde ouede verlas</p>
+    </div>
+    <div class="contact">
+      <h3>Contactos</h3>
+      <section>
+        <article>
+          <p class="pDeFooter"> Email : PeliMax@hotmai.com</p>
+        </article>
+        <article>
+          <p class="pDeFooter">Numero De Telefono : 23456122</p>
+        </article>
+        <article > <FontAwesomeIcon icon={faInstagram} style="lineHeight: 2  , color: rgb(219, 149, 221)"/>
+          <p class="pDeFooter">Instagram : PeliMax007</p>
+        </article>
+        <article><i style="lineHeight: 2, color: blue" class="fa-brands fa-facebook-square"></i>
+      
+
+          <p class="pDeFooter">facebook : PeliMax</p>
+        </article>
+        <article>
+          
+        <FontAwesomeIcon icon={faTwitter} style="lineHeight: 2, color: rgb(84, 184, 230)" />
+          <p class="pDeFooter">Twitter : PeliMaxima</p>
+        </article>
+      </section>
+    </div>
+      <form class="formPP"action="">
+        <h3>¿No encuentra su pelicula?</h3>
+        <p>Envienos un email con el nombre d la pelicula y envrebe la estaremos añadiendo</p>
+        <div class="contenedorDePedirPeliculas">
+        <div class="divPedirPeliculas">
+          <label class="labelDePedirPelicula" for="">Su Email :</label>
+        <input class="inputPedirPeli" type="email" name="Email" />
+        
+
+      </div>
+      <div class="divPedirPeliculas">
+        <label class="labelDePedirPelicula" for="">pelicula a añadir :</label>
+        <input class="inputPedirPeli" type="text" name="pedido" />
+        
+        
+    </div>
+
+    <button type="submit" class="btn-btn-primary" className="margin: 0px;">Enviar</button>
+  </div>
+
+    </form>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>
